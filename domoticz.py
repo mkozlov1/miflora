@@ -77,7 +77,7 @@ def update(address, idx_moist, idx_temp, idx_lux, idx_cond):
     val_moist_total = 0
     val_cond_total = 0
     val_bat_total = 0
-    loops = 0
+    loop = 0
     success_count = 0
     while loop < LOOP_COUNT:
         try:
@@ -90,7 +90,7 @@ def update(address, idx_moist, idx_temp, idx_lux, idx_cond):
         val_moist_total += val_moist
         val_cond_total += val_cond
         val_bat_total += val_bat
-        loops += 1
+        loop += 1
         success_count += 1
         time.sleep(SLEEP_TIME_SECONDS)
 
